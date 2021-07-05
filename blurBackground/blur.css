@@ -34,7 +34,7 @@ section .box::before {
   bottom: -20px;
   background: url(beautiful.jpg);
   background-attachment: fixed;
-  background-size: cover;
+    background-size: cover;
 
   filter: blur(4px);
 }

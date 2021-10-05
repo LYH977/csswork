@@ -1,0 +1,18 @@
+@mixin flexCenter($direction) {
+  display: flex;
+  justify-content: center;
+  flex-direction: $direction;
+}
+
+header {
+  @include flexCenter(column);
+  background-color: red;
+
+  color: $textColor;
+  button {
+    background-color: cadetblue;
+    &::after {
+      content: 'sfgsg';
+    }
+  }
+}

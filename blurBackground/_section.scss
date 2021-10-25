@@ -1,0 +1,44 @@
+@mixin flexCenter($direction) {
+  display: flex;
+  justify-content: center;
+  flex-direction: $direction;
+}
+
+section {
+  @include flexCenter(row);
+  position: relative;
+  align-items: center;
+  height: 100vh;
+  background: url(beautiful.jpg);
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  .box {
+    position: relative;
+    max-width: 600px;
+    padding: 50px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+    overflow: hidden;
+    color: #000;
+    &::before {
+      content: '';
+      position: absolute;
+      top: -20px;
+      left: -20px;
+      right: -20px;
+      bottom: -20px;
+      background: url(beautiful.jpg);
+      background-attachment: fixed;
+      background-size: cover;
+
+      filter: blur(4px);
+    }
+
+    * {
+      position: relative;
+      color: black;
+      z-index: 50;
+    }
+  }
+}

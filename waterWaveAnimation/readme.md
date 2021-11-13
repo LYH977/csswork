@@ -1,1 +1,1 @@
-![water wave animation](water wave text.gif?raw=true)
+![water wave animation](waterWaveAnimation/water wave text.gif?raw=true)

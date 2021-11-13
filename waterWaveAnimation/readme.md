@@ -1,1 +1,1 @@
-![water wave animation](/water wave text.gif)
+![water wave animation](water wave text.gif)

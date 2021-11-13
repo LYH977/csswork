@@ -2,7 +2,7 @@
 
 @mixin child($n) {
   &:nth-child(#{$n}) {
-    animation-delay: 0.7 * $n;
+    animation-delay: 0.4s * $n;
   }
 }
 
@@ -36,8 +36,8 @@ video {
   font-weight: 800;
   font-size: 50px;
   color: #777;
-  // transition: 1s;
-  animation: reveal 2.5s linear forwards;
+  transition: 1s;
+  animation: reveal 1s linear forwards;
   opacity: 0;
   filter: blur(15px);
 }

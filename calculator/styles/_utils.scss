@@ -1,0 +1,50 @@
+@mixin flexCenter($direction) {
+  display: flex;
+  flex-direction: $direction;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin keyCurvedBorder {
+  border-radius: $KEY_HEIGHT / 3;
+}
+
+// color
+@mixin keyCurvedBorder {
+  border-radius: $KEY_HEIGHT / 3;
+}
+
+@mixin keyGrey {
+  background: $DM_GREY;
+  background-image: linear-gradient(
+    to bottom right,
+    $DM_GRADIENT_GREY_TL,
+    $DM_GRADIENT_GREY_BR
+  );
+  //   box-shadow: inset 1px 1px 1px #616674, inset -1px -1px 1px #3d424f;
+  box-shadow: inset $hOffset $vOffset $blur $DM_GRADIENT_GREY_BR,
+    inset -1 * $hOffset -1 * $vOffset $blur $DM_GRADIENT_GREY_TL;
+}
+@mixin keyBlack {
+  background: $DM_BLACK_BTN;
+  background-image: linear-gradient(
+    to bottom right,
+    $DM_GRADIENT_BLACK_TL,
+    $DM_GRADIENT_BLACK_BR
+  );
+  box-shadow: inset $hOffset $vOffset $blur #4e5061,
+    inset -1 * $hOffset -1 * $vOffset $blur #362d2e;
+  //   box-shadow: inset 1px 1px 1px $DM_GRADIENT_BLACK_BR,
+  //     inset -1px -1px 1px $DM_GRADIENT_BLACK_TL;
+}
+
+@mixin keyOrange {
+  background: $DM_ORANGE;
+  background-image: linear-gradient(
+    to bottom right,
+    $DM_GRADIENT_ORANGE_TL,
+    $DM_GRADIENT_ORANGE_BR
+  );
+  box-shadow: inset $hOffset $vOffset $blur $DM_GRADIENT_ORANGE_BR,
+    inset -1 * $hOffset -1 * $vOffset $blur $DM_GRADIENT_ORANGE_TL;
+}

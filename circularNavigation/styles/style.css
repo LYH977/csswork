@@ -1,0 +1,209 @@
+@-webkit-keyframes toggle-rotate {
+  from {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@keyframes toggle-rotate {
+  from {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  min-height: 100vh;
+  background: -webkit-gradient(linear, left top, right bottom, from(red), to(yellow));
+  background: linear-gradient(to bottom right, red, yellow);
+}
+
+.menu {
+  position: relative;
+  width: 200px;
+  height: 200px;
+  background: transparent;
+  border-radius: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.menu li {
+  position: absolute;
+  left: 0;
+  list-style: none;
+  -webkit-transform-origin: 100px;
+          transform-origin: 100px;
+  -webkit-transition: 1s;
+  transition: 1s;
+  -webkit-transition-delay: calc(0.1s * var(--i));
+          transition-delay: calc(0.1s * var(--i));
+  -webkit-transform: rotate(0deg) translateX(80px);
+          transform: rotate(0deg) translateX(80px);
+}
+
+.menu li a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 40px;
+  height: 40px;
+  background: white;
+  border-radius: 50%;
+  -webkit-transform: rotate(calc(360deg / 8 * var(--i)));
+          transform: rotate(calc(360deg / 8 * var(--i)));
+  color: #111;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.menu li a:hover {
+  color: red;
+}
+
+.toggle {
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  background: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  z-index: 100;
+  border-radius: 50%;
+  cursor: pointer;
+  -webkit-box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.15);
+          box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.15);
+  font-size: 2em;
+  -webkit-transition: -webkit-transform 1.25s;
+  transition: -webkit-transform 1.25s;
+  transition: transform 1.25s;
+  transition: transform 1.25s, -webkit-transform 1.25s;
+}
+
+.menu.active li {
+  -webkit-transform: rotate(calc(-360deg / 8 * var(--i)));
+          transform: rotate(calc(-360deg / 8 * var(--i)));
+  -webkit-animation-name: inline-u1223ad93;
+          animation-name: inline-u1223ad93;
+  -webkit-animation-duration: 20s;
+          animation-duration: 20s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+  -webkit-animation-delay: calc(1.6s);
+          animation-delay: calc(1.6s);
+}
+
+@-webkit-keyframes inline-u1223ad93 {
+  from {
+    -webkit-transform: rotate(calc(-360deg / 8 * var(--i)));
+            transform: rotate(calc(-360deg / 8 * var(--i)));
+  }
+  to {
+    -webkit-transform: rotate(calc(-360deg / 8 * var(--i) - 720deg));
+            transform: rotate(calc(-360deg / 8 * var(--i) - 720deg));
+  }
+}
+
+@keyframes inline-u1223ad93 {
+  from {
+    -webkit-transform: rotate(calc(-360deg / 8 * var(--i)));
+            transform: rotate(calc(-360deg / 8 * var(--i)));
+  }
+  to {
+    -webkit-transform: rotate(calc(-360deg / 8 * var(--i) - 720deg));
+            transform: rotate(calc(-360deg / 8 * var(--i) - 720deg));
+  }
+}
+
+.menu.active li a {
+  -webkit-animation-name: inline-ub122ae18;
+          animation-name: inline-ub122ae18;
+  -webkit-animation-duration: 20s;
+          animation-duration: 20s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+  -webkit-animation-delay: calc(1.6s);
+          animation-delay: calc(1.6s);
+}
+
+@-webkit-keyframes inline-ub122ae18 {
+  from {
+    -webkit-transform: rotate(calc(360deg / 8 * var(--i)));
+            transform: rotate(calc(360deg / 8 * var(--i)));
+  }
+  to {
+    -webkit-transform: rotate(calc(360deg / 8 * var(--i) + 720deg));
+            transform: rotate(calc(360deg / 8 * var(--i) + 720deg));
+  }
+}
+
+@keyframes inline-ub122ae18 {
+  from {
+    -webkit-transform: rotate(calc(360deg / 8 * var(--i)));
+            transform: rotate(calc(360deg / 8 * var(--i)));
+  }
+  to {
+    -webkit-transform: rotate(calc(360deg / 8 * var(--i) + 720deg));
+            transform: rotate(calc(360deg / 8 * var(--i) + 720deg));
+  }
+}
+
+.menu.active .toggle {
+  -webkit-animation-name: toggle-rotate;
+          animation-name: toggle-rotate;
+  -webkit-animation-duration: 2s;
+          animation-duration: 2s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+}
+/*# sourceMappingURL=style.css.map */

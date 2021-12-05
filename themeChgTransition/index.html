@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./styles/style.css" />
+    <title>Theme change transition</title>
+  </head>
+  <body>
+    <div class="container">
+      <div style="height: 100%; overflow: hidden; width: 100%">
+        <svg viewBox="0 0 890 500" preserveAspectRatio="none">
+          <defs>
+            <pattern
+              id="img1"
+              patternUnits="userSpaceOnUse"
+              width="100%"
+              height="100%"
+            >
+              <image
+                href="light.png"
+                x="0"
+                y="0"
+                width="100%"
+                height="100%"
+                preserveAspectRatio="none"
+              />
+            </pattern>
+          </defs>
+          <!-- wave from top to btm -->
+          <!-- d="M-1.89,-5.13 C46.21,-4.14 901.66,-13.03 908.31,-6.11 L900.00,550.00 L0.00,550.00 Z" -->
+
+          <!-- wave from right to left -->
+          <!-- d="M970,0 C920,220 1030,280 960,500 L0.00,500.00 L0.00,0.00 Z" -->
+
+          <path
+            d="M-1.89,-5.13 C46.21,-4.14 901.66,-13.03 908.31,-6.11 L900.00,550.00 L0.00,550.00 Z"
+            style="stroke: none"
+            fill="url(#img1)"
+          ></path>
+        </svg>
+      </div>
+    </div>
+  </body>
+</html>

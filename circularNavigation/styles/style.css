@@ -127,8 +127,8 @@ body {
 .menu.active li {
   -webkit-transform: rotate(calc(-360deg / 8 * var(--i)));
           transform: rotate(calc(-360deg / 8 * var(--i)));
-  -webkit-animation-name: inline-u1223ad93;
-          animation-name: inline-u1223ad93;
+  -webkit-animation-name: inline-u9991f61b;
+          animation-name: inline-u9991f61b;
   -webkit-animation-duration: 20s;
           animation-duration: 20s;
   -webkit-animation-iteration-count: infinite;
@@ -139,7 +139,7 @@ body {
           animation-delay: calc(1.6s);
 }
 
-@-webkit-keyframes inline-u1223ad93 {
+@-webkit-keyframes inline-u9991f61b {
   from {
     -webkit-transform: rotate(calc(-360deg / 8 * var(--i)));
             transform: rotate(calc(-360deg / 8 * var(--i)));
@@ -150,7 +150,7 @@ body {
   }
 }
 
-@keyframes inline-u1223ad93 {
+@keyframes inline-u9991f61b {
   from {
     -webkit-transform: rotate(calc(-360deg / 8 * var(--i)));
             transform: rotate(calc(-360deg / 8 * var(--i)));
@@ -162,8 +162,8 @@ body {
 }
 
 .menu.active li a {
-  -webkit-animation-name: inline-ub122ae18;
-          animation-name: inline-ub122ae18;
+  -webkit-animation-name: inline-u5b0b9977;
+          animation-name: inline-u5b0b9977;
   -webkit-animation-duration: 20s;
           animation-duration: 20s;
   -webkit-animation-iteration-count: infinite;
@@ -174,7 +174,7 @@ body {
           animation-delay: calc(1.6s);
 }
 
-@-webkit-keyframes inline-ub122ae18 {
+@-webkit-keyframes inline-u5b0b9977 {
   from {
     -webkit-transform: rotate(calc(360deg / 8 * var(--i)));
             transform: rotate(calc(360deg / 8 * var(--i)));
@@ -185,7 +185,7 @@ body {
   }
 }
 
-@keyframes inline-ub122ae18 {
+@keyframes inline-u5b0b9977 {
   from {
     -webkit-transform: rotate(calc(360deg / 8 * var(--i)));
             transform: rotate(calc(360deg / 8 * var(--i)));

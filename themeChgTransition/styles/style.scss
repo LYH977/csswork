@@ -1,0 +1,48 @@
+$HEIGHT: 500;
+$WIDTH: 890;
+
+$TOP_LEFT_1_X: -1.89;
+$TOP_LEFT_1_Y: -5.13;
+$TOP_LEFT_2_X: -1000;
+$TOP_LEFT_2_Y: 1000;
+$TOP_RIGHT_1_X: 1400;
+$TOP_RIGHT_1_Y: 1200;
+$TOP_RIGHT_2_X: 908;
+$TOP_RIGHT_2_Y: -6.11;
+$BTM_LEFT_X: 900;
+$BTM_LEFT_Y: 550;
+$BTM_RIGHT_X: 0;
+$BTM_RIGHT_Y: 550;
+
+.container {
+  height: $HEIGHT + px;
+  width: $WIDTH + px;
+  background: red;
+  background-image: url('../dark.png');
+  background-size: cover;
+}
+
+body {
+  background: lightblue;
+}
+
+svg {
+  path {
+    transition: 1s;
+    animation-name: drip;
+    animation-iteration-count: infinite;
+    animation-duration: 1s;
+    animation-timing-function: linear;
+  }
+}
+@keyframes drip {
+  // wave from top to btm
+  100% {
+    d: path(
+      'M#{$TOP_LEFT_1_X},#{$TOP_LEFT_1_Y} C#{$TOP_LEFT_2_X},#{$TOP_LEFT_2_Y} #{$TOP_RIGHT_1_X},#{$TOP_RIGHT_1_Y} #{$TOP_RIGHT_2_X},#{$TOP_RIGHT_2_Y} L#{$BTM_LEFT_X},#{$BTM_LEFT_Y} L#{$BTM_RIGHT_X},#{$BTM_RIGHT_Y} Z'
+    );
+  }
+  // wave from right to left
+  //   100% {
+  // d: path('M-230,0 C-380,220 -70,280 -240,500 L0.00,500.00 L0.00,0.00 Z');  }
+}

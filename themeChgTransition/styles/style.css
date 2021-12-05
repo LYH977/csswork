@@ -1,0 +1,37 @@
+.container {
+  height: 500px;
+  width: 890px;
+  background: red;
+  background-image: url("../dark.png");
+  background-size: cover;
+}
+
+body {
+  background: lightblue;
+}
+
+svg path {
+  -webkit-transition: 1s;
+  transition: 1s;
+  -webkit-animation-name: drip;
+          animation-name: drip;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+}
+
+@-webkit-keyframes drip {
+  100% {
+    d: path("M-1.89,-5.13 C-1000,1000 1400,1200 908,-6.11 L900,550 L0,550 Z");
+  }
+}
+
+@keyframes drip {
+  100% {
+    d: path("M-1.89,-5.13 C-1000,1000 1400,1200 908,-6.11 L900,550 L0,550 Z");
+  }
+}
+/*# sourceMappingURL=style.css.map */

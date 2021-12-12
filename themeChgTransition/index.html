@@ -27,18 +27,59 @@
                 preserveAspectRatio="none"
               />
             </pattern>
+            <filter id="shadow" x0="-50%" y0="-50%" width="200%" height="200%">
+              <feGaussianBlur
+                in="SourceAlpha"
+                stdDeviation="5"
+                result="blur"
+              ></feGaussianBlur>
+              <feOffset dy="10" dx="-10"></feOffset>
+              <feComposite
+                in2="SourceAlpha"
+                operator="arithmetic"
+                k2="-1"
+                k3="1"
+                result="shadowDiff"
+              ></feComposite>
+
+              <feFlood flood-color="grey" flood-opacity="0.75"></feFlood>
+              <feComposite in2="shadowDiff" operator="in"></feComposite>
+              <feComposite
+                in2="SourceGraphic"
+                operator="over"
+                result="firstfilter"
+              ></feComposite>
+              <feDropShadow
+                dx="-7"
+                dy="-10"
+                stdDeviation="10"
+                flood-color="white"
+                flood-opacity="0.5"
+              />
+            </filter>
           </defs>
           <!-- wave from top to btm -->
-          <!-- d="M-1.89,-5.13 C46.21,-4.14 901.66,-13.03 908.31,-6.11 L900.00,550.00 L0.00,550.00 Z" -->
-
-          <!-- wave from right to left -->
-          <!-- d="M970,0 C920,220 1030,280 960,500 L0.00,500.00 L0.00,0.00 Z" -->
-
           <path
             d="M-1.89,-5.13 C46.21,-4.14 901.66,-13.03 908.31,-6.11 L900.00,550.00 L0.00,550.00 Z"
             style="stroke: none"
             fill="url(#img1)"
+            filter="url(#shadow)"
           ></path>
+
+          <!-- testing from top to btm -->
+          <!-- <path
+            d="M-1.89,55.13 C46.21,214.14 901.66,13.03 908.31,16.11 L900.00,550.00 L0.00,550.00 Z"
+            style="stroke: none"
+            fill="url(#img1)"
+            filter="url(#shadow)"
+          ></path> -->
+
+          <!-- wave from right to left -->
+          <!-- <path
+            d="M970,0 C920,220 1030,280 960,500 L0.00,500.00 L0.00,0.00 Z"
+            style="stroke: none"
+            fill="url(#img1)"
+          ></path> -->
         </svg>
       </div>
     </div>

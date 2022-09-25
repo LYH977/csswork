@@ -1,0 +1,51 @@
+body {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 2rem;
+  background-color: aqua;
+  gap: 2rem;
+}
+
+.child > img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+img {
+  /* aspect-ratio: 2/2; */
+  /* aspect-ratio: 3/2; */
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  /* opacity: 0.1; */
+}
+
+.parent {
+  display: flex;
+  width: 1600px;
+  height: auto;
+  background: yellow;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.child {
+  position: relative;
+  aspect-ratio: 3/2;
+  background: red;
+  width: 100%;
+  margin: 5px;
+}
+
+.padding-trick {
+  position: relative;
+  width: 100%;
+  padding-bottom: calc(2 / 3 * 100%);
+  background-color: beige;
+  box-sizing: content-box;
+}

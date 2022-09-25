@@ -1,0 +1,17 @@
+{
+  "name": "xcel",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "node-xlsx": "^0.21.0",
+    "read-excel-file": "^5.5.0",
+    "xlsx": "^0.18.5"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}

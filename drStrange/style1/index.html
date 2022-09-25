@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" href="./index.css" />
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="portal">
+      <!-- <div class="chispa"></div> -->
+    </div>
+    <script>
+      let portal = document.getElementById('portal');
+      for (let i = 0; i < 360; i++) {
+        let chispa = document.createElement('div');
+        chispa.className = 'chispa';
+        chispa.style.rotate = i * 2 + 'deg';
+        let chispaTranslatipn = Math.random() * (120 - 100) + 100;
+        chispa.style.transform = 'translate(' + chispaTranslatipn + 'px)';
+        portal.appendChild(chispa);
+      }
+    </script>
+  </body>
+</html>

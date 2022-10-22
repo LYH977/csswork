@@ -4,6 +4,10 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  background-color: lightcoral;
+  overflow: hidden;
+  box-sizing: border-box;
+  position: relative;
 }
 
 // svg {
@@ -73,8 +77,8 @@ body {
   position: relative;
   height: 134pt;
   width: 168pt;
-  background-color: rgba(126, 210, 238, 0.1);
-
+  background-color: white;
+  z-index: -1;
   & > div {
     position: absolute;
     height: 100%;
@@ -87,23 +91,17 @@ body {
       width: 100%;
       top: 0;
       left: 0;
-      //   filter: drop-shadow(3px 3px 2px rgba(0, 0, 0, 0.7));
-
-      //   animation-name: formLogo;
-      //   animation-delay: 1s;
-      //   animation-duration: 3s;
-      //   animation-fill-mode: forwards;
     }
     &::after {
       position: absolute;
       font-size: 50px;
-      height: 100%;
-      width: 100%;
-      top: 90px;
-      animation-name: hideName;
-      animation-delay: 1s;
-      animation-duration: 1s;
-      animation-fill-mode: forwards;
+
+      top: 0;
+      left: 0;
+      // animation-name: hideName;
+      // animation-delay: 1s;
+      // animation-duration: 1s;
+      // animation-fill-mode: forwards;
     }
   }
 }
@@ -119,7 +117,7 @@ body {
   }
   &::after {
     content: 'ee';
-    left: -40px;
+    transform: translate(-40px, 90px);
   }
 }
 
@@ -131,12 +129,12 @@ body {
     animation-delay: 1s;
     animation-duration: 3s;
     animation-timing-function: ease-out;
-    // animation-duration: 1s;
     animation-fill-mode: forwards;
   }
   &::after {
     content: 'uan';
-    left: 120px;
+    transform: translate(120px, 90px);
+    // overflow: visible;
   }
 }
 .logo-H {
@@ -151,13 +149,15 @@ body {
   }
   &::after {
     content: 'ooi';
-    left: 320px;
+    transform: translate(320px, 90px);
+    // overflow: hidden;
   }
 }
 
 @keyframes hideName {
   100% {
-    transform: translateY(10px);
+    // transform: translate(10px);
+
     opacity: 0;
   }
 }
@@ -186,17 +186,45 @@ body {
 //   }
 // }
 
-.triangle {
-  border-left: 30px solid green;
-  border-right: 20px solid transparent;
-  border-bottom: 20px solid transparent;
-  height: 0;
-  width: 0;
-}
-
 .circle {
+  position: relative;
   height: 100px;
   width: 100px;
   border-radius: 50%;
-  background-color: yellow;
+  background-color: green;
+  &::before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    height: 30px;
+    width: 30px;
+    background-color: white;
+    margin-left: -15px;
+    margin-top: -15px;
+    border-radius: 50%;
+  }
+  & > .triangle {
+    border-left: 70px solid green;
+    border-right: 30px solid transparent;
+    border-bottom: 30px solid transparent;
+    height: 0;
+    width: 0;
+    position: absolute;
+    &:nth-child(1) {
+      top: 0;
+      left: 50%;
+    }
+    &:nth-child(2) {
+      top: 90px;
+      left: 8px;
+      transform: rotate(120deg);
+    }
+    &:nth-child(3) {
+      top: 10px;
+      left: -55px;
+      transform: rotate(240deg);
+      border-left: 70px solid green;
+    }
+  }
 }

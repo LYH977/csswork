@@ -10,6 +10,11 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  background-color: lightcoral;
+  overflow: hidden;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  position: relative;
 }
 
 .logo-container {
@@ -25,7 +30,8 @@ body {
   position: relative;
   height: 134pt;
   width: 168pt;
-  background-color: rgba(126, 210, 238, 0.1);
+  background-color: white;
+  z-index: -1;
 }
 
 .logo-container > div {
@@ -47,17 +53,8 @@ body {
 .logo-container > div::after {
   position: absolute;
   font-size: 50px;
-  height: 100%;
-  width: 100%;
-  top: 90px;
-  -webkit-animation-name: hideName;
-          animation-name: hideName;
-  -webkit-animation-delay: 1s;
-          animation-delay: 1s;
-  -webkit-animation-duration: 1s;
-          animation-duration: 1s;
-  -webkit-animation-fill-mode: forwards;
-          animation-fill-mode: forwards;
+  top: 0;
+  left: 0;
 }
 
 .logo-L::before {
@@ -76,7 +73,8 @@ body {
 
 .logo-L::after {
   content: 'ee';
-  left: -40px;
+  -webkit-transform: translate(-40px, 90px);
+          transform: translate(-40px, 90px);
 }
 
 .logo-Y::before {
@@ -95,7 +93,8 @@ body {
 
 .logo-Y::after {
   content: 'uan';
-  left: 120px;
+  -webkit-transform: translate(120px, 90px);
+          transform: translate(120px, 90px);
 }
 
 .logo-H::before {
@@ -114,21 +113,18 @@ body {
 
 .logo-H::after {
   content: 'ooi';
-  left: 320px;
+  -webkit-transform: translate(320px, 90px);
+          transform: translate(320px, 90px);
 }
 
 @-webkit-keyframes hideName {
   100% {
-    -webkit-transform: translateY(10px);
-            transform: translateY(10px);
     opacity: 0;
   }
 }
 
 @keyframes hideName {
   100% {
-    -webkit-transform: translateY(10px);
-            transform: translateY(10px);
     opacity: 0;
   }
 }
@@ -147,18 +143,53 @@ body {
   }
 }
 
-.triangle {
-  border-left: 30px solid green;
-  border-right: 20px solid transparent;
-  border-bottom: 20px solid transparent;
-  height: 0;
-  width: 0;
-}
-
 .circle {
+  position: relative;
   height: 100px;
   width: 100px;
   border-radius: 50%;
-  background-color: yellow;
+  background-color: green;
+}
+
+.circle::before {
+  content: '';
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  height: 30px;
+  width: 30px;
+  background-color: white;
+  margin-left: -15px;
+  margin-top: -15px;
+  border-radius: 50%;
+}
+
+.circle > .triangle {
+  border-left: 70px solid green;
+  border-right: 30px solid transparent;
+  border-bottom: 30px solid transparent;
+  height: 0;
+  width: 0;
+  position: absolute;
+}
+
+.circle > .triangle:nth-child(1) {
+  top: 0;
+  left: 50%;
+}
+
+.circle > .triangle:nth-child(2) {
+  top: 90px;
+  left: 8px;
+  -webkit-transform: rotate(120deg);
+          transform: rotate(120deg);
+}
+
+.circle > .triangle:nth-child(3) {
+  top: 10px;
+  left: -55px;
+  -webkit-transform: rotate(240deg);
+          transform: rotate(240deg);
+  border-left: 70px solid green;
 }
 /*# sourceMappingURL=index.css.map */
